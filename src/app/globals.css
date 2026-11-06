@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0F2A44;
+  --color-cream: #FAF8F4;
+  --color-sand: #F3EEE4;
+  --color-gold: #9A6B2F;
+  --color-ink: #1F2937;
+  --color-muted: #6B7280;
+  --color-slate: #5B6676;
+  --color-slate-link: #475569;
+  --color-tan: #F3E3BE;
+  --color-pill-gold: #F8E9C6;
+  --color-border: rgba(15, 42, 68, 0.12);
+  
+  --font-heading: "Poppins", system-ui, sans-serif;
+  --font-body: "Inter Variable", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #FAF8F4;
+    color: #5B6676;
+    font-family: var(--font-body);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2 {
+    font-family: var(--font-heading);
+    color: #0F2A44;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.05;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: #0F2A44;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  p {
+    color: #5B6676;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    color: inherit;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
