@@ -142,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* Academics */}
-      <section className="py-24 lg:py-32 bg-sand">
+      <section className="py-24 lg:py-32 bg-sand overflow-x-clip">
         <Container>
           <Reveal>
             <div className="flex items-center gap-3 mb-4">
@@ -201,17 +201,23 @@ export default function Home() {
                       </ImageReveal>
                     </div>
                     <div className={imageOnRight ? 'lg:order-1' : ''}>
-                      <span className="inline-block px-3 py-1 text-xs border border-gold/40 bg-pill-gold text-gold mb-4 rounded-full font-semibold tracking-wider">{level.ages}</span>
-                      <h3 className="text-4xl mb-4 text-navy font-heading">{level.title}</h3>
-                      <p className="text-slate mb-4">{level.text}</p>
-                      <div className="flex items-center gap-2 mb-4">
-                        <GraduationCap size={16} className="text-gold" />
-                        <span className="text-navy font-medium">{level.fact}</span>
-                      </div>
-                      <a href="#" className="inline-flex items-center gap-2 text-gold group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A6B2F]/50 focus-visible:ring-offset-2 rounded-sm motion-reduce:transition-none">
-                        <span>{level.link}</span>
-                        <ArrowRight size={16} className="transition-transform group-hover:translate-x-1 motion-reduce:transition-none" />
-                      </a>
+                      <Reveal fade delay={0.2} duration={0.9}>
+                        <span className="inline-block px-3 py-1 text-xs border border-gold/40 bg-pill-gold text-gold mb-4 rounded-full font-semibold tracking-wider">{level.ages}</span>
+                      </Reveal>
+                      <Reveal direction={imageOnRight ? "left" : "right"} duration={0.9}>
+                        <h3 className="text-4xl mb-4 text-navy font-heading">{level.title}</h3>
+                      </Reveal>
+                      <Reveal fade delay={0.2} duration={0.9}>
+                        <p className="text-slate mb-4">{level.text}</p>
+                        <div className="flex items-center gap-2 mb-4">
+                          <GraduationCap size={16} className="text-gold" />
+                          <span className="text-navy font-medium">{level.fact}</span>
+                        </div>
+                        <a href="#" className="inline-flex items-center gap-2 text-gold group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A6B2F]/50 focus-visible:ring-offset-2 rounded-sm motion-reduce:transition-none">
+                          <span>{level.link}</span>
+                          <ArrowRight size={16} className="transition-transform group-hover:translate-x-1 motion-reduce:transition-none" />
+                        </a>
+                      </Reveal>
                     </div>
                   </div>
                 </Reveal>

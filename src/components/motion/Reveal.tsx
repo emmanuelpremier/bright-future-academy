@@ -10,6 +10,8 @@ interface RevealProps {
   y?: number;
   trigger?: "scroll" | "load";
   duration?: number;
+  direction?: "left" | "right";
+  fade?: boolean;
 }
 
 export default function Reveal({
@@ -19,15 +21,32 @@ export default function Reveal({
   y = 24,
   trigger = "scroll",
   duration,
+  direction,
+  fade = false,
 }: RevealProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const hasDirection = direction === "left" || direction === "right";
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-100px",
+    amount: hasDirection ? 0.4 : "some",
+  });
   const shouldReduceMotion = useReducedMotion();
 
   const isLoad = trigger === "load";
-  const resolvedDuration = duration ?? (isLoad ? 1.0 : 0.7);
+  const resolvedDuration = duration ?? (isLoad || hasDirection ? (hasDirection ? 0.9 : 1.0) : 0.7);
   const resolvedDelay = isLoad ? (delay || 0.15) : delay;
-  const resolvedY = isLoad ? (y === 24 ? 72 : y) : y;
+
+  let initial: { opacity: number; x?: number; y?: number } = { opacity: 0, y: isLoad ? (y === 24 ? 72 : y) : y };
+  let animateTo: { opacity: number; x?: number; y?: number } = { opacity: 1, y: 0 };
+
+  if (hasDirection) {
+    initial = { opacity: 0, x: direction === "right" ? 40 : -40 };
+    animateTo = { opacity: 1, x: 0 };
+  } else if (fade) {
+    initial = { opacity: 0 };
+    animateTo = { opacity: 1 };
+  }
 
   if (shouldReduceMotion) {
     return <div ref={ref} className={className}>{children}</div>;
@@ -36,8 +55,8 @@ export default function Reveal({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: resolvedY }}
-      animate={isLoad || isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: resolvedY }}
+      initial={initial}
+      animate={isLoad || isInView ? animateTo : initial}
       transition={{
         duration: resolvedDuration,
         delay: resolvedDelay,

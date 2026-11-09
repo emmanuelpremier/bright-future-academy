@@ -72,50 +72,101 @@ export const school = {
   }
 };
 
-// ABOUT PAGE - new placeholder values for the About page
+// ABOUT PAGE - placeholder copy for the About page
 export const aboutPage = {
-  // Campu us and facilities gallery captions
-  campusCaption: "Wide campus overlooking the main drive",
-  scienceLabCaption: "Science laboratory with ten practical benches",
-  earlyYearsCaption: "Early years room with soft flooring and low shelves",
-  libraryCaption: "Library with over ten thousand books",
-  // Story milestones
-  milestones: [
-    { year: "2006", event: "School founded with a handful of Nursery pupils" },
-    { year: "2010", event: "First Primary 6 class writes its final exams" },
-    { year: "2014", event: "Secondary school opens its first set of classes" },
-    { year: "2020", event: "First SSS 3 set sits the WAEC exam" },
-    { year: "2026", event: "Current session - a full nursery-to-SSS 3 school" }
+  // Page header
+  headerLabel: "ABOUT THE SCHOOL", // PLACEHOLDER
+  headerTitle: "Twenty years of steady, serious schooling in Lekki", // PLACEHOLDER
+  headerIntro:
+    "Bright Future Academy opened in September 2006 with 68 pupils in two rented classrooms. Today, 1,240 children learn here from Pre-Nursery to SSS 3, and the founding family still sits on the board.", // PLACEHOLDER
+
+  // Our story
+  storyTitle: "Started by teachers, not investors", // PLACEHOLDER
+  storyParagraphs: [
+    "The school was founded by Chief (Dr.) Olusegun Adeyemi, a retired education ministry director, and his wife Mrs. Folake Adeyemi, who had taught primary school in Surulere for 18 years. Their conviction was simple: a school should be judged by what its pupils can actually do (read, reason, write and behave), not by its premises.", // PLACEHOLDER
+    "The secondary arm opened in 2011 and presented its first WASSCE candidates in 2016. In 2019 the school moved permanently to its present compound on Fola Osibo Road, and in 2024 it recorded its fifth consecutive year above a 90% WAEC/NECO pass rate.", // PLACEHOLDER
+    "We remain deliberately modest in size. We would rather hold a class at 24 students and know every name than grow into a school where children are numbers on a register.", // PLACEHOLDER
   ],
-  // Mission statement
-  missionStatement:
-    "Every child who walks through our gates leaves with stronger reading skills, a clearer sense of right and wrong, and the confidence to ask questions. We do not chase exam results at the expense of character, because the two belong together.",
-  // Values
-  values: [
-    { number: "01", title: "Know every child", body: "Teachers learn each child's name, strengths and struggles within the first two weeks of term and plan lessons around them." },
-    { number: "02", title: "Teach properly", body: "Smaller classes, structured lessons and regular marking so no child is left to guess what was taught." },
-    { number: "03", title: "Keep parents informed", body: "Termly reports, open days and a direct line to every class teacher. Parents are partners, not spectators." },
-    { number: "04", title: "Build character", body: "Morning assembly, house systems and weekly values lessons teach respect, honesty and responsibility in practice." }
+
+  // What we stand for
+  standForTitle: "Four commitments, kept term after term", // PLACEHOLDER
+  commitments: [
+    {
+      icon: "BookOpen",
+      title: "Knowledge, properly taught", // PLACEHOLDER
+      body: "We follow the Nigerian national curriculum with approved Lagos State schemes of work, and we finish what we start: syllabus covered, exercises marked, corrections expected back.", // PLACEHOLDER
+    },
+    {
+      icon: "Compass",
+      title: "Character before certificates", // PLACEHOLDER
+      body: "Straight talk, respect for elders, and honest work matter as much as grades. Our prefects are chosen for conduct first, and our houses compete for a conduct cup, not only a sports cup.", // PLACEHOLDER
+    },
+    {
+      icon: "HeartHandshake",
+      title: "Partnership with parents", // PLACEHOLDER
+      body: "Open-door days every school day, a class WhatsApp group per form, and report cards that tell you what to revise at home, not just a letter grade.", // PLACEHOLDER
+    },
+    {
+      icon: "Sparkles",
+      title: "Room to be a child", // PLACEHOLDER
+      body: "Daily outdoor play for the younger ones, inter-house sports, choirs, drama, chess and coding clubs. Rigour and joy are not opposites here.", // PLACEHOLDER
+    },
   ],
-  // Leadership placeholders
+
+  // Leadership
+  leadershipTitle: "The people parents actually meet", // PLACEHOLDER
+  leadershipIntro: "Our leadership team teaches. That is a policy, not an accident, and it is why they know what happens in every classroom.", // PLACEHOLDER
   leaders: [
-    { initials: "AJ", name: "Afolabi Johnson", role: "Principal", subject: "Head of school", className: "w-[220px]" },
-    { initials: "AO", name: "Amara Osei", role: "Vice Principal Academics", subject: "Mathematics and Science", className: "w-[160px]" },
-    { initials: "CK", name: "Chinedu Okonkwo", role: "Head of Primary", subject: "Primary years", className: "w-[160px]" }
+    {
+      name: "Mrs. Adaeze Okafor", // PLACEHOLDER
+      role: "PRINCIPAL", // PLACEHOLDER
+      bio: "Twenty-two years in Lagos private education, including nine as Vice-Principal Academic here. She still teaches Literature-in-English to SSS 2 every Thursday.", // PLACEHOLDER
+      image: "principal", // PLACEHOLDER
+    },
+    {
+      name: "Mr. Tayo Balogun", // PLACEHOLDER
+      role: "HEAD OF PRIMARY", // PLACEHOLDER
+      bio: "A former Local Government Education Authority master-trainer, Mr. Balogun leads our reading programme and supervises Common Entrance preparation from Primary 4.", // PLACEHOLDER
+      image: "head-primary", // PLACEHOLDER
+    },
+    {
+      name: "Mrs. Halima Bello", // PLACEHOLDER
+      role: "HEAD OF EARLY YEARS", // PLACEHOLDER
+      bio: "AMI-certified Montessori directress. She has built our Pre-Nursery and Nursery rooms into calm, orderly, genuinely playful classrooms.", // PLACEHOLDER
+      image: "head-early-years", // PLACEHOLDER
+    },
   ],
-  // Campus and facilities gallery
-  campusImages: [
-    { src: "campus", alt: "School campus looking toward the administrative block", caption: "Wide campus overlooking the main drive" },
-    { src: "secondary", alt: "Secondary school science laboratory", caption: "Science laboratory with ten practical benches" },
-    { src: "nursery", alt: "Nursery early years room", caption: "Early years room with soft flooring and low shelves" },
-    { src: "primary", alt: "Primary school library", caption: "Library with over ten thousand books" }
+
+  // Facilities
+  facilitiesTitle: "What is inside the gate", // PLACEHOLDER
+  facilities: [
+    {
+      image: "library", // PLACEHOLDER
+      title: "The Adeyemi Library", // PLACEHOLDER
+      body: "2,400 titles for borrowing, a silent reading room, and the book-a-month review wall. Open to pupils before school and at lunch.", // PLACEHOLDER
+    },
+    {
+      image: "ict", // PLACEHOLDER
+      title: "ICT & CBT Centre", // PLACEHOLDER
+      body: "A 40-seat computer-based test centre used for weekly timed practice from SSS 1, plus the robotics workshop for the JSS coding club.", // PLACEHOLDER
+    },
+    {
+      image: "sports", // PLACEHOLDER
+      title: "Sports Ground", // PLACEHOLDER
+      body: "A full football pitch, basketball court and 100m track. Inter-House Sports has run every February since 2008.", // PLACEHOLDER
+    },
+    {
+      image: "campus-palms", // PLACEHOLDER
+      title: "The Campus", // PLACEHOLDER
+      body: "Three classroom blocks on a secure, single-gate compound on Fola Osibo Road, with a sick bay staffed by a resident nurse.", // PLACEHOLDER
+    },
   ],
-  // Hero section metadata
-  hero: {
-    label: "ABOUT THE SCHOOL",
-    title: "A Lekki school built around small classes",
-    intro:
-      "Bright Future Academy is a private nursery, primary and secondary school founded in 2006 and approved by the Lagos State Ministry of Education. We keep our classes small so that every child is known by name and taught at the right pace."
-  }
+
+  // Closing card
+  closingTitle: "Come and see for yourself", // PLACEHOLDER
+  closingBody:
+    "The best way to judge a school is to walk through it on a school day. Tours run between 8:00am and 2:00pm, and children are welcome.", // PLACEHOLDER
+  closingPrimary: "Apply for Admission", // PLACEHOLDER
+  closingSecondary: "Contact the Office", // PLACEHOLDER
 };
 
