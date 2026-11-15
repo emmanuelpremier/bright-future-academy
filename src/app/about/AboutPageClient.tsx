@@ -22,7 +22,7 @@ export function AboutPageClient() {
       <section aria-labelledby="page-header-heading" className="bg-sand py-24">
         <Container>
           <Reveal>
-            <SectionLabel className="block mb-6">ABOUT THE SCHOOL</SectionLabel>
+            <SectionLabel className="mb-6">ABOUT THE SCHOOL</SectionLabel>
             <h1
               id="page-header-heading"
               className="text-3xl sm:text-4xl md:text-5xl font-heading text-navy max-w-2xl leading-tight mb-6"
@@ -43,10 +43,10 @@ export function AboutPageClient() {
           <Reveal>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <div className="space-y-6">
-                <SectionLabel className="block mb-4">OUR STORY</SectionLabel>
+                <SectionLabel className="mb-4">OUR STORY</SectionLabel>
                 <h2
                   id="story-heading"
-                  className="text-2xl md:text-3xl font-heading text-navy leading-tight mb-6"
+                  className="text-3xl md:text-4xl font-heading text-navy leading-tight mb-6"
                 >
                   {aboutPage.storyTitle}
                 </h2>
@@ -56,16 +56,20 @@ export function AboutPageClient() {
                   </p>
                 ))}
               </div>
-              <div className="max-w-[576px] w-full aspect-[5/4] rounded-3xl overflow-hidden mx-auto lg:mx-0">
-                <div className="absolute inset-0 -translate-x-4 -translate-y-4 rounded-3xl border border-[#9A6B2F]"></div>
-                <Image
-                  src="/images/campus-palms.jpg"
-                  alt="Campus view with palm trees lining the main drive"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 576px"
-                  priority
+              <div className="relative w-full max-w-[576px] mx-auto lg:mx-0">
+                <div
+                  aria-hidden="true"
+                  className="absolute -left-4 -top-4 h-full w-full rounded-3xl border border-[#9A6B2F]"
                 />
+                <div className="relative aspect-[5/4] rounded-3xl overflow-hidden bg-cream">
+                  <Image
+                    src="/images/campus-palms.jpg"
+                    alt="Campus view with palm trees lining the main drive"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 576px"
+                  />
+                </div>
               </div>
             </div>
           </Reveal>
@@ -76,10 +80,10 @@ export function AboutPageClient() {
       <section aria-labelledby="standfor-heading" className="bg-[#0F2A44] py-24 text-white">
         <Container>
           <Reveal>
-            <SectionLabel className="block mb-8">WHAT WE STAND FOR</SectionLabel>
+            <SectionLabel className="mb-8">WHAT WE STAND FOR</SectionLabel>
             <h2
               id="standfor-heading"
-              className="text-2xl md:text-3xl font-heading text-white leading-tight mb-12"
+              className="text-3xl md:text-4xl font-heading text-white leading-tight mb-12"
             >
               {aboutPage.standForTitle}
             </h2>
@@ -103,11 +107,11 @@ export function AboutPageClient() {
       <section aria-labelledby="leadership-heading" className="bg-cream py-24">
         <Container>
           <Reveal>
-            <div className="space-y-8 max-w-5xl mx-auto">
-              <SectionLabel className="block mb-4">LEADERSHIP</SectionLabel>
+            <div className="space-y-8">
+              <SectionLabel className="mb-4">LEADERSHIP</SectionLabel>
               <h2
                 id="leadership-heading"
-                className="text-2xl md:text-3xl font-heading text-navy leading-tight mb-6"
+                className="text-3xl md:text-4xl font-heading text-navy leading-tight mb-6"
               >
                 {aboutPage.leadershipTitle}
               </h2>
@@ -143,11 +147,11 @@ export function AboutPageClient() {
       <section aria-labelledby="facilities-heading" className="bg-sand py-24">
         <Container>
           <Reveal>
-            <div className="space-y-8 max-w-6xl mx-auto">
-              <SectionLabel className="block mb-4">FACILITIES</SectionLabel>
+            <div className="space-y-8">
+              <SectionLabel className="mb-4">FACILITIES</SectionLabel>
               <h2
                 id="facilities-heading"
-                className="text-2xl md:text-3xl font-heading text-navy leading-tight mb-8"
+                className="text-3xl md:text-4xl font-heading text-navy leading-tight mb-8"
               >
                 {aboutPage.facilitiesTitle}
               </h2>
@@ -180,10 +184,10 @@ export function AboutPageClient() {
         <Container>
           <Reveal>
             <div className="max-w-3xl mx-auto">
-              <div className="bg-[#F3E6C4] border-[#D8C8A7] rounded-3xl p-12 text-center mx-auto">
+              <div className="bg-[#F3E6C4] border border-[#D8C8A7] rounded-3xl p-12 md:p-16 text-center mx-auto">
                 <h2
                   id="closing-heading"
-                  className="font-heading font-semibold text-navy mb-6"
+                  className="text-3xl md:text-4xl font-heading font-semibold text-navy mb-6"
                 >
                   {aboutPage.closingTitle}
                 </h2>
@@ -194,7 +198,7 @@ export function AboutPageClient() {
                   <Button href="/admissions" variant="primary" icon="arrow">
                     {aboutPage.closingPrimary}
                   </Button>
-                  <Button href="/contact" variant="outline" icon="calendarCheck" iconPosition="left">
+                  <Button href="/contact" variant="outline" icon={null}>
                     {aboutPage.closingSecondary}
                   </Button>
                 </div>

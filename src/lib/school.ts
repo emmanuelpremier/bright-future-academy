@@ -69,7 +69,41 @@ export const school = {
       text: "Guided campus tours at 9am, 11am and 1pm. Meet the Principal, visit classrooms, and ask our SSS 3 students why they stayed from Nursery.",
       href: "/admissions"
     }
-  }
+  },
+
+  // PLACEHOLDER - testimonial content
+  testimonials: [
+    {
+      // PLACEHOLDER
+      quote: "We moved from another school in Ajah in Primary 3 and the difference showed in one term. My daughter now reads on her own, and her class teacher calls us before we even think to ask. When she had trouble with fractions, the school arranged extra lessons without my asking. This is what you pay for, and it is worth every naira.",
+      name: "Mrs. Ifeoma Adeniyi",
+      role: "Parent, Primary 5 and JSS 2"
+    },
+    {
+      // PLACEHOLDER
+      quote: "Our son was a quiet boy who hid his weak subjects. In JSS 1 his form teacher noticed, called me the same week, and by the end of the term his Mathematics had moved from 41 to 68. The school did not wait for report day to tell us.",
+      name: "Mr. Tunde Bakare",
+      role: "Parent, JSS 3"
+    },
+    {
+      // PLACEHOLDER
+      quote: "I was nervous about sending a three year old to school. In the first week his teacher sent me a note every afternoon on what he ate and what he built. Now he asks on Saturdays whether it is a school day.",
+      name: "Mrs. Zainab Lawal",
+      role: "Parent, Nursery 2"
+    },
+    {
+      // PLACEHOLDER
+      quote: "My daughter sat her WAEC mock in March and the corrections came back the same day. Her teachers stayed after 4pm for extra lessons and she wrote the real papers calm.",
+      name: "Mr. Emeka Nwosu",
+      role: "Parent, SSS 2"
+    },
+    {
+      // PLACEHOLDER
+      quote: "School fees are not small, so I watched closely. Two terms in, I get a call when something is wrong and a call when something is right. That is why our second child joined the first this year.",
+      name: "Mrs. Funke Adebayo",
+      role: "Parent, Primary 3 and Primary 6"
+    }
+  ]
 };
 
 // ABOUT PAGE - placeholder copy for the About page

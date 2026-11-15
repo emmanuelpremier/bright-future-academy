@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, GraduationCap, ArrowRight, Users, BookCheck, FlaskConical, MessageSquare, Trophy } from "lucide-react";
@@ -10,6 +8,7 @@ import Button from "@/components/ui/Button";
 import Reveal from "@/components/motion/Reveal";
 import ImageReveal from "@/components/motion/ImageReveal";
 import CountUp from "@/components/motion/CountUp";
+import TestimonialCarousel from "@/components/home/TestimonialCarousel";
 
 export default function Home() {
   return (
@@ -24,19 +23,21 @@ export default function Home() {
                 <div className="w-8 h-px bg-gold"></div>
                 <span className="text-xs uppercase tracking-[0.18em] text-gold font-semibold">LEKKI, LAGOS · ESTABLISHED {school.established}</span>
               </div>
-              <h1 className="text-5xl md:text-[52px] font-semibold text-navy leading-[1.1] tracking-tight max-w-[520px]">
-                Every child known.<br className="hidden sm:block" />
-                Every lesson<br className="hidden sm:block" />
+              <h1 className="text-4xl sm:text-5xl md:text-[52px] font-semibold text-navy leading-[1.1] tracking-tight max-w-[520px]">
+                Every child known.{" "}
+                <br className="hidden sm:block" />
+                Every lesson{" "}
+                <br className="hidden sm:block" />
                 taught properly.
               </h1>
               <p className="text-lg leading-relaxed text-slate max-w-xl mt-6">
                 Bright Future Academy is a private nursery, primary and secondary school in Lekki, Lagos. Since 2006 we have prepared children for Common Entrance, BECE, WAEC and NECO, in small classes, with teachers who mark the books.
               </p>
-              <div className="flex gap-4 mt-8">
-                <Button href="/admissions" variant="primary" icon="arrow" className="h-12 px-6 text-[15px]">
+              <div className="flex flex-col gap-3 mt-8 sm:flex-row sm:gap-4">
+                <Button href="/admissions" variant="primary" icon="arrow" className="h-12 w-full justify-center whitespace-nowrap px-6 text-[15px] sm:w-auto">
                   Apply Now
                 </Button>
-                <Button href="/contact" variant="outline" icon="calendarCheck" iconPosition="left" className="h-12 px-6 text-[15px]">
+                <Button href="/contact" variant="outline" icon="calendarCheck" iconPosition="left" className="h-12 w-full justify-center whitespace-nowrap px-6 text-[15px] sm:w-auto">
                   Book a Campus Tour
                 </Button>
               </div>
@@ -45,7 +46,7 @@ export default function Home() {
                 <span>Approved by the Lagos State Ministry of Education</span>
               </div>
             </Reveal>
-            <Reveal trigger="load" y={72} delay={0.15} duration={1.0}>
+            <Reveal trigger="scroll" y={72} delay={0.15} duration={1.0} amount={0.15} margin="0px">
               <div className="relative">
                 <div className="absolute inset-0 -translate-x-4 -translate-y-4 rounded-3xl border border-gold/35"></div>
                 <div className="relative aspect-[4/3.2] rounded-3xl overflow-hidden">
@@ -228,22 +229,9 @@ export default function Home() {
       </section>
 
       {/* Testimonial */}
-      <section className="py-24 lg:py-32 bg-cream">
-        <Container>
-          <Reveal>
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="text-6xl text-gold font-heading font-normal mb-4">&ldquo;</div>
-              <blockquote className="text-xl md:text-2xl lg:text-3xl font-heading font-normal text-navy leading-[1.5] mb-8">
-                We moved from another school in Ajah in Primary 3 and the difference showed in one term. My daughter now reads on her own, and her class teacher calls us before we even think to ask. When she had trouble with fractions, the school arranged extra lessons without my asking. This is what you pay for, and it is worth every naira.
-              </blockquote>
-              <div>
-                <p className="text-navy font-bold">Mrs. Ifeoma Adeniyi</p>
-                <p className="text-muted text-sm">Parent, Primary 5 and JSS 2</p>
-              </div>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
+      <Reveal>
+        <TestimonialCarousel />
+      </Reveal>
 
       {/* News and events */}
       <section className="py-24 lg:py-32 bg-sand">

@@ -16,21 +16,21 @@ function SocialIcon({ href, label, children }: { href: string; label: string; ch
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F2A44] text-cream">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1.2fr_1.2fr]">
+    <footer className="bg-[#0E263B] text-cream">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-[1.4fr_0.6fr_1fr_1fr]">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-[#B8893B] rounded-xl flex items-center justify-center">
                 <span className="text-[#0F2A44] font-heading text-lg">B</span>
               </div>
               <div className="leading-tight">
-                <div className="text-white font-heading">Bright Future</div>
-                <div className="text-[10px] text-[#B8893B] tracking-[0.2em] uppercase font-semibold">ACADEMY</div>
+                <div className="text-white font-heading text-xl">Bright Future</div>
+                <div className="text-[11px] text-[#B8893B] tracking-[0.22em] uppercase font-semibold">ACADEMY</div>
               </div>
             </div>
-            <p className="text-sm text-white/70 leading-relaxed mb-6 max-w-sm">
+            <p className="text-[15px] text-white/70 leading-relaxed mt-6 mb-6 max-w-sm">
               A private nursery, primary and secondary school in Lekki, Lagos. Established 2006, approved by the Lagos State Ministry of Education.
             </p>
             <div className="flex items-center gap-3">
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* The School */}
           <div>
-            <h3 className="font-heading uppercase text-[13px] tracking-[0.18em] text-[#B8893B] mb-4">THE SCHOOL</h3>
+            <h3 className="font-heading uppercase text-xs tracking-[0.18em] text-[#A98242] mb-4">THE SCHOOL</h3>
             <ul className="space-y-3">
               {[
                 { href: "/", label: "Home" },
@@ -62,7 +62,7 @@ export default function Footer() {
                 { href: "/login", label: "Portal Login" },
               ].map((link) => (
                 <li key={link.href + link.label}>
-                  <Link href={link.href} className="text-sm text-white/85 hover:text-[#B8893B] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8893B]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F2A44] rounded-sm motion-reduce:transition-none">
+                  <Link href={link.href} className="text-[15px] leading-5 text-white/75 hover:text-[#B8893B] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8893B]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F2A44] rounded-sm motion-reduce:transition-none">
                     {link.label}
                   </Link>
                 </li>
@@ -72,8 +72,8 @@ export default function Footer() {
 
           {/* Visit or Call */}
           <div>
-            <h3 className="font-heading uppercase text-[13px] tracking-[0.18em] text-[#B8893B] mb-4">VISIT OR CALL</h3>
-            <ul className="space-y-3 text-sm text-white/85">
+            <h3 className="font-heading uppercase text-xs tracking-[0.18em] text-[#A98242] mb-4">VISIT OR CALL</h3>
+            <ul className="space-y-4 text-[15px] leading-5 text-white/75">
               <li className="flex gap-3">
                 <MapPin size={16} strokeWidth={1.5} className="text-[#B8893B] mt-0.5 shrink-0" />
                 <span>
@@ -90,7 +90,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail size={16} strokeWidth={1.5} className="text-[#B8893B] mt-0.5 shrink-0" />
-                <a href={`mailto:${school.email}`} className="hover:text-[#B8893B] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8893B]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F2A44] rounded-sm break-all motion-reduce:transition-none">{school.email}</a>
+                <a href={`mailto:${school.email}`} className="hover:text-[#B8893B] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8893B]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F2A44] rounded-sm xl:whitespace-nowrap motion-reduce:transition-none">{school.email}</a>
               </li>
               <li className="flex gap-3">
                 <Clock size={16} strokeWidth={1.5} className="text-[#B8893B] mt-0.5 shrink-0" />
@@ -101,8 +101,8 @@ export default function Footer() {
 
           {/* Termly Newsletter */}
           <div>
-            <h3 className="font-heading uppercase text-[13px] tracking-[0.18em] text-[#B8893B] mb-4">TERMLY NEWSLETTER</h3>
-            <p className="text-sm text-white/70 mb-4">One email at the start of each term: calendar dates, results and events. No spam.</p>
+            <h3 className="font-heading uppercase text-xs tracking-[0.18em] text-[#A98242] mb-4">TERMLY NEWSLETTER</h3>
+            <p className="text-[15px] text-white/70 leading-relaxed mb-4">One email at the start of each term: calendar dates, results and events. No spam.</p>
             <form className="relative">
               <label htmlFor="footer-email" className="sr-only">Parent email address</label>
               <input
@@ -122,9 +122,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-          <p className="text-xs text-white/60">© 2026 {school.name}. All rights reserved.</p>
-          <p className="text-xs text-white/60">Lagos State Ministry of Education approval No. {school.approvalNumber}</p>
+        <div className="border-t border-white/10 mt-16 pt-8 pb-10 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+          <p className="text-xs text-white/55">© 2026 {school.name}. All rights reserved.</p>
+          <p className="text-xs text-white/55">Lagos State Ministry of Education approval No. {school.approvalNumber}</p>
         </div>
       </div>
     </footer>

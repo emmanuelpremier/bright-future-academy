@@ -3,6 +3,8 @@
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 
+type InViewOptions = NonNullable<Parameters<typeof useInView>[1]>;
+
 interface RevealProps {
   children: React.ReactNode;
   className?: string;
@@ -12,6 +14,8 @@ interface RevealProps {
   duration?: number;
   direction?: "left" | "right";
   fade?: boolean;
+  amount?: InViewOptions["amount"];
+  margin?: InViewOptions["margin"];
 }
 
 export default function Reveal({
@@ -23,13 +27,15 @@ export default function Reveal({
   duration,
   direction,
   fade = false,
+  amount,
+  margin,
 }: RevealProps) {
   const ref = useRef(null);
   const hasDirection = direction === "left" || direction === "right";
   const isInView = useInView(ref, {
     once: true,
-    margin: "-100px",
-    amount: hasDirection ? 0.4 : "some",
+    margin: margin ?? "-100px",
+    amount: amount ?? (hasDirection ? 0.4 : "some"),
   });
   const shouldReduceMotion = useReducedMotion();
 

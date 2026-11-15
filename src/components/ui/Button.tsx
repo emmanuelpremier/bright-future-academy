@@ -9,7 +9,7 @@ interface ButtonProps {
   variant?: "primary" | "outline" | "gold" | "onDark";
   className?: string;
   onClick?: () => void;
-  icon?: "arrow" | "calendar" | "calendarCheck";
+  icon?: "arrow" | "calendar" | "calendarCheck" | null;
   iconPosition?: "left" | "right";
 }
 
@@ -22,10 +22,10 @@ export default function Button({ children, href, variant = "primary", className 
     onDark: "border border-cream/40 text-cream hover:bg-cream hover:text-navy"
   };
 
-  const resolvedIcon = icon ?? (variant === "outline" ? "calendarCheck" : "arrow");
-  const resolvedPosition = iconPosition ?? (resolvedIcon === "arrow" ? "right" : "left");
+  const resolvedIcon = icon === null ? null : icon ?? (variant === "outline" ? "calendarCheck" : "arrow");
+  const resolvedPosition = resolvedIcon === null ? "right" : iconPosition ?? (resolvedIcon === "arrow" ? "right" : "left");
   const Icon = resolvedIcon === "calendarCheck" ? CalendarCheck : resolvedIcon === "calendar" ? Calendar : ArrowRight;
-  const iconEl = <Icon size={16} className={variant === "outline" ? "text-[#0F2A44]" : ""} />;
+  const iconEl = resolvedIcon ? <Icon size={16} className={variant === "outline" ? "text-[#0F2A44]" : ""} /> : null;
 
   const styles = `${baseStyles} ${variants[variant]} ${className}`;
 

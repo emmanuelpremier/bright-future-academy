@@ -40,12 +40,12 @@ export default function Navbar() {
           {/* Logo */}
           <div className="justify-self-start">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
-                <span className="text-white font-heading text-lg">B</span>
+              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-navy rounded-lg flex items-center justify-center">
+                <span className="text-white font-heading text-base sm:text-lg">B</span>
               </div>
               <div className="leading-tight">
-                <div className="text-lg font-heading text-navy">Bright Future</div>
-                <div className="text-[10px] text-gold tracking-[0.3em] font-semibold uppercase">ACADEMY</div>
+                <div className="text-base sm:text-lg font-heading text-navy whitespace-nowrap">Bright Future</div>
+                <div className="text-[9px] sm:text-[10px] text-gold tracking-[0.3em] font-semibold uppercase whitespace-nowrap">ACADEMY</div>
               </div>
             </Link>
           </div>
@@ -88,7 +88,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-navy"
+            className="lg:hidden col-start-3 justify-self-end text-navy"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -98,7 +100,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 top-20 bg-cream">
-          <div className="flex flex-col p-6 gap-6">
+          <div className="flex flex-col px-4 sm:px-6 py-6 gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -118,7 +120,7 @@ export default function Navbar() {
             >
               Login
             </Link>
-            <Button href="/admissions" variant="primary" className="w-fit">
+            <Button href="/admissions" variant="primary" className="w-full h-12 justify-center gap-2 whitespace-nowrap px-6 py-0 text-[15px]">
               Apply Now
             </Button>
           </div>
