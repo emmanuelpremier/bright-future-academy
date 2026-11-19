@@ -162,6 +162,7 @@ export default function Home() {
                 text: "Play-based Montessori classrooms led by trained early-years practitioners. The first years of school should feel like an extension of home.",
                 fact: "Phonics-first pre-reading, numeracy through play",
                 link: "Explore nursery",
+                href: "/academics#nursery",
                 image: "/images/nursery.jpg",
                 alt: "Nursery students in classroom"
               },
@@ -171,6 +172,7 @@ export default function Home() {
                 text: "The Nigerian national curriculum with a reading culture built in: a book a month, and Common Entrance preparation from Primary 4.",
                 fact: "National Common Entrance preparation from Primary 4",
                 link: "Explore primary school",
+                href: "/academics#primary",
                 image: "/images/primary.jpg",
                 alt: "Primary students learning"
               },
@@ -180,6 +182,7 @@ export default function Home() {
                 text: "Laboratory science from JSS 1, WAEC and NECO syllabus completed by SSS 2, and a revision year with timed past papers and Saturday JAMB classes.",
                 fact: "96% WAEC/NECO pass rate, 41 distinctions in 2026",
                 link: "Explore secondary, JSS & SSS",
+                href: "/academics#junior-secondary",
                 image: "/images/secondary.jpg",
                 alt: "Secondary students in class"
               }
@@ -214,7 +217,7 @@ export default function Home() {
                           <GraduationCap size={16} className="text-gold" />
                           <span className="text-navy font-medium">{level.fact}</span>
                         </div>
-                        <a href="#" className="inline-flex items-center gap-2 text-gold group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A6B2F]/50 focus-visible:ring-offset-2 rounded-sm motion-reduce:transition-none">
+                        <a href={level.href} className="inline-flex items-center gap-2 text-gold group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9A6B2F]/50 focus-visible:ring-offset-2 rounded-sm motion-reduce:transition-none">
                           <span>{level.link}</span>
                           <ArrowRight size={16} className="transition-transform group-hover:translate-x-1 motion-reduce:transition-none" />
                         </a>

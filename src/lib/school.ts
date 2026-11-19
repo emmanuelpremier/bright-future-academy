@@ -204,3 +204,160 @@ export const aboutPage = {
   closingSecondary: "Contact the Office", // PLACEHOLDER
 };
 
+export interface AcademicsLevelContent {
+  id: string;
+  image: string;
+  imageAlt: string;
+  ages: string;
+  names: string;
+  title: string;
+  paragraph: string;
+  teaching: string[];
+  subjects: string[];
+}
+
+export interface AcademicsPageContent {
+  headerLabel: string;
+  headerTitle: string;
+  headerIntro: string;
+  teachingLabel: string;
+  subjectsLabel: string;
+  levels: AcademicsLevelContent[];
+  closing: {
+    title: string;
+    body: string;
+    primaryLabel: string;
+    primaryHref: string;
+    secondaryLabel: string;
+    secondaryHref: string;
+  };
+}
+
+// PLACEHOLDER - Academics page content
+export const academicsPage: AcademicsPageContent = {
+  headerLabel: "ACADEMICS",
+  headerTitle: "One curriculum, built level by level",
+  headerIntro:
+    "We follow the Nigerian national curriculum, approved by the Lagos State Ministry of Education, enriched with British and international content, so our students are prepared for Common Entrance, BECE, WAEC and NECO, and for whatever comes after.",
+  teachingLabel: "HOW WE TEACH",
+  subjectsLabel: "SUBJECTS",
+  levels: [
+    {
+      id: "nursery",
+      image: "/images/nursery.jpg",
+      imageAlt: "Nursery children learning through play in a bright classroom",
+      ages: "AGES 2 – 5",
+      names: "PRE-NURSERY · NURSERY 1 · NURSERY 2",
+      title: "Pre-Nursery & Nursery",
+      paragraph:
+        "The first years of school should feel like an extension of home. Our early-years rooms are calm, bright and play-based, led by trained Montessori practitioners who know every child by name.",
+      teaching: [
+        "British-inspired Early Years Foundation Stage, adapted for Nigerian homes",
+        "Montessori practical-life and sensorial materials in every classroom",
+        "Phonics-first pre-reading, numeracy through play, and handwriting readiness",
+        "Daily outdoor play, music, movement and story time in Yoruba and English",
+      ],
+      subjects: [
+        "Pre-reading & Phonics",
+        "Numeracy",
+        "Creative Arts",
+        "Music & Movement",
+        "Social Skills",
+        "Health Habits",
+      ],
+    },
+    {
+      id: "primary",
+      image: "/images/primary.jpg",
+      imageAlt: "Primary pupils reading together at their desks",
+      ages: "AGES 6 – 11",
+      names: "PRIMARY 1 – 6",
+      title: "Primary School",
+      paragraph:
+        "From Primary 1 our pupils follow the Nigerian national curriculum, enriched with international material, so they can sit the Common Entrance Examination with confidence and move on to any strong secondary school.",
+      teaching: [
+        "Nigerian national curriculum with a fully approved Lagos State scheme of work",
+        "Preparation for the National Common Entrance Examination from Primary 4",
+        "Reading culture: a book-a-month programme with termly book reviews",
+        "Weekly ICT, French, music and physical education from Primary 1",
+      ],
+      subjects: [
+        "English Language",
+        "Mathematics",
+        "Basic Science & Technology",
+        "National Values",
+        "Yoruba",
+        "French",
+        "ICT",
+        "Creative & Cultural Arts",
+      ],
+    },
+    {
+      id: "junior-secondary",
+      image: "/images/secondary.jpg",
+      imageAlt: "Junior secondary students working in a science laboratory",
+      ages: "AGES 12 – 14",
+      names: "JSS 1 – JSS 3",
+      title: "Junior Secondary (JSS 1 – 3)",
+      paragraph:
+        "The junior secondary years build the habits that carry students through WAEC and beyond: consistent study, laboratory experience from JSS 1, and a broad subject base before BECE.",
+      teaching: [
+        "Full coverage of the national curriculum ahead of the BECE (Junior WAEC)",
+        "Laboratory-based basic science from JSS 1 in our dedicated junior science lab",
+        "Study-skills and tutorial programme with evening prep for boarding students",
+        "Structured guidance counselling before senior-school subject selection",
+      ],
+      subjects: [
+        "English Language",
+        "Mathematics",
+        "Basic Science",
+        "Basic Technology",
+        "Business Studies",
+        "Social Studies",
+        "Civic Education",
+        "Computer Studies",
+        "Agricultural Science",
+        "Cultural & Creative Arts",
+      ],
+    },
+    {
+      id: "senior-secondary",
+      image: "/images/ict.jpg",
+      imageAlt: "Senior students at computers in the ICT and CBT centre",
+      ages: "AGES 15 – 18",
+      names: "SSS 1 – SSS 3",
+      title: "Senior Secondary (SSS 1 – 3)",
+      paragraph:
+        "Senior students choose between the Science, Commercial and Arts tracks and prepare for WASSCE and NECO under subject specialists who mark for the examining bodies themselves.",
+      teaching: [
+        "WAEC and NECO syllabus coverage completed by the end of SSS 2, with SSS 3 reserved for revision and past papers",
+        "Weekly timed CBT practice in our 40-seat computer-based test centre",
+        "Optional JAMB/UTME preparation classes every Saturday from SSS 2",
+        "One-on-one subject-teacher clinics for any student below a B grade",
+      ],
+      subjects: [
+        "English Language",
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Further Mathematics",
+        "Economics",
+        "Financial Accounting",
+        "Literature-in-English",
+        "Government",
+        "Geography",
+        "Christian/Islamic Religious Studies",
+      ],
+    },
+  ],
+  closing: {
+    title: "See the curriculum in action",
+    body: "Sit in on a lesson during a campus tour, or ask the admissions office for a copy of the current scheme of work for your child's class.",
+    primaryLabel: "Apply for Admission",
+    primaryHref: "/admissions",
+    secondaryLabel: "Request a Prospectus",
+    secondaryHref: "/contact",
+  },
+};
+
