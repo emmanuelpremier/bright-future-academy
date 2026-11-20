@@ -361,3 +361,183 @@ export const academicsPage: AcademicsPageContent = {
   },
 };
 
+const admissionsRegistrationFee = "₦150,000";
+const admissionsSession = "2025/2026";
+const admissionsEntryLabel = "September 2026 entry";
+
+/*
+ PLACEHOLDERS: fees, session year, entry date, hours and boarding and bus details are invented and must be replaced with real data.
+*/
+export const admissionsPage = {
+  entryLabel: admissionsEntryLabel,
+  session: admissionsSession,
+  registrationFee: admissionsRegistrationFee,
+  header: {
+    label: `ADMISSIONS · ${admissionsEntryLabel.toUpperCase()}`,
+    title: "Joining Bright Future is straightforward and personal",
+    intro:
+      "Every application is read by the admissions office, and every child meets a teacher before an offer is made. Entrance assessments hold every Saturday in March and June.",
+  },
+  process: {
+    label: "THE PROCESS",
+    title: "Five steps, one working-day reply",
+    steps: [
+      {
+        number: "01",
+        title: "Enquire",
+        text: "Send an inquiry through the form below or call the admissions office. We answer within one working day and send our prospectus and current fees.",
+      },
+      {
+        number: "02",
+        title: "Book a campus tour",
+        text: "Visit us any school day between 8:00am and 2:00pm, or join a guided group tour on the first Saturday of each month. Children are welcome.",
+      },
+      {
+        number: "03",
+        title: "Entrance assessment",
+        text: "Pre-Nursery to Nursery 2: a play-based assessment. Primary 1 to SSS 1: a written test in English, Mathematics and General Paper, held every Saturday in March and June.",
+      },
+      {
+        number: "04",
+        title: "Offer and acceptance",
+        text: `Successful families receive an offer within five working days. Acceptance is confirmed with a non-refundable registration fee of ${admissionsRegistrationFee}, which is credited against First Term tuition.`,
+      },
+      {
+        number: "05",
+        title: "Enrolment",
+        text: "Pay First Term fees, collect the uniform list and booklist from the front office, and join the class WhatsApp group. Your child starts on the first day of term.",
+      },
+    ],
+  },
+  fees: {
+    label: "SCHOOL FEES",
+    title: `Fees per term, ${admissionsSession} session`,
+    intro:
+      "Fees are quoted per term; there are three terms in the session. What is included is listed against each level, so there are no surprise levies.",
+    caption: "Tuition per term by level",
+    levelColumn: "Level",
+    tuitionColumn: "Tuition",
+    rows: [
+      {
+        level: "Pre-Nursery & Nursery",
+        note: "Includes meals and learning materials",
+        tuition: "₦850,000",
+      },
+      {
+        level: "Primary 1 – 3",
+        note: "Includes textbooks and excursions",
+        tuition: "₦1,100,000",
+      },
+      {
+        level: "Primary 4 – 6",
+        note: "Includes Common Entrance preparation",
+        tuition: "₦1,250,000",
+      },
+      {
+        level: "Junior Secondary (JSS 1 – 3)",
+        note: "Includes laboratory and ICT levies",
+        tuition: "₦1,650,000",
+      },
+      {
+        level: "Senior Secondary (SSS 1 – 3)",
+        note: "Includes WAEC/NECO registration in SSS 3",
+        tuition: "₦1,900,000",
+      },
+    ],
+    noteTitle: "Please note",
+    notes: [
+      "Sibling discount of 5% on tuition for the second child and 10% from the third child.",
+      "Optional school-bus service covering Lekki Phase 1, Ikate, Chevron and Ajah: ₦180,000 per term.",
+      "Optional boarding for SSS students: ₦650,000 per term, inclusive of meals and laundry.",
+      "Fees are reviewed each April and communicated to parents before the new session begins.",
+    ],
+  },
+  requirements: {
+    label: "WHAT TO BRING",
+    title: "Requirements for enrolment",
+    intro:
+      "Bring these to the front office when accepting an offer, or upload scans during your campus visit. Copies are fine, we do not keep originals.",
+    items: [
+      "Completed application form (online or at the front office)",
+      "Birth certificate or declaration of age",
+      "Four recent passport photographs of the child",
+      "Last two end-of-term report cards (for Primary 1 upward)",
+      "Transfer certificate from the previous school, where applicable",
+      "Immunisation record for children joining Pre-Nursery or Nursery",
+      "Copy of parents' or guardians' valid ID",
+    ],
+  },
+  form: {
+    title: "Start your application",
+    intro:
+      "Tell us a little about your child and the admissions office will reply within one working day with the prospectus, current fees and available places.",
+    guardianLabel: "Parent or guardian's name",
+    guardianPlaceholder: "e.g. Mrs. Ifeoma Adeniyi",
+    phoneLabel: "Phone number",
+    phonePlaceholder: "+234 ...",
+    emailLabel: "Email address",
+    emailPlaceholder: "you@example.com",
+    levelLabel: "Class you are applying for",
+    levelPlaceholder: "Select a level",
+    levelOptions: [
+      "Pre-Nursery / Nursery 1",
+      "Nursery 2",
+      "Primary 1 – 3",
+      "Primary 4 – 6",
+      "JSS 1 – 3",
+      "SSS 1 – 3",
+    ],
+    messageLabel: "How can we help?",
+    messagePlaceholder:
+      "Tell us about your child, or ask us anything about fees, transport or the curriculum.",
+    footnote: "We reply within one working day during term time.",
+    submitLabel: "Send Message",
+  },
+  faq: {
+    label: "COMMON QUESTIONS",
+    title: "Answers parents ask for most",
+    items: [
+      {
+        question: "When does the school session begin?",
+        answer:
+          "We follow the standard three-term Nigerian calendar. First Term begins in early September, Second Term in early January, and Third Term in late April. Exact dates are published in the parent portal at the end of each term.",
+      },
+      {
+        question: "What are the school hours?",
+        answer:
+          "Nursery runs 8:00am to 12:30pm, Primary runs 7:45am to 2:00pm, and Secondary runs 7:45am to 3:00pm, with optional after-school clubs until 4:30pm and evening prep for boarders.",
+      },
+      {
+        question: "Do you accept mid-term admissions?",
+        answer:
+          "Yes, where a class has space. Families relocating to Lagos mid-term are our most common mid-session admits; we run a one-week settling-in programme with a buddy assigned in each class.",
+      },
+      {
+        question: "Is there an entrance examination?",
+        answer:
+          "Pre-Nursery to Nursery 2 attend a friendly play-based assessment. Primary 1 to SSS 1 sit a written entrance test in English, Mathematics and General Paper, followed by a short interview with the parents present.",
+      },
+      {
+        question: "What curriculum do you follow?",
+        answer:
+          "The Nigerian national curriculum, approved by the Lagos State Ministry of Education, enriched with British and international content so our students are equally prepared for WAEC, NECO and, where families choose, IGCSE retakes.",
+      },
+      {
+        question: "Do you operate a school bus?",
+        answer:
+          "Yes. Buses cover Lekki Phase 1, Ikate, Chevron, and Ajah, with a trained attendant on every route. Pick-up times are confirmed the week before each term begins.",
+      },
+      {
+        question: "How large are the classes?",
+        answer:
+          "Our student-teacher ratio is 12:1 school-wide. Nursery classes cap at 14, Primary at 20, and Secondary at 24 students per class.",
+      },
+    ],
+  },
+  closing: {
+    title: "Prefer to talk to a person?",
+    beforePhone: "Call the admissions office at",
+    afterPhone: ". Or visit the campus on Fola Osibo Road any school day.",
+  },
+};
+
